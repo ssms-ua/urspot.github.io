@@ -1,0 +1,26 @@
+{
+  "name": "btr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.1"
+  }
+}

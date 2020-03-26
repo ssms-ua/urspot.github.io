@@ -1,0 +1,80 @@
+/* =========== Fonts =========== */
+@font-face {
+	font-family: 'Proxima Nova Th';
+	src: url('ProximaNovaT-Thin.eot');
+	src: local('Proxima Nova Thin'), local('ProximaNovaT-Thin'),
+		url('../fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNovaT-Thin.woff2') format('woff2'),
+		url('../fonts/ProximaNovaT-Thin.woff') format('woff'),
+		url('../fonts/ProximaNovaT-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('ProximaNova-Regular.eot');
+	src: local('Proxima Nova'), local('ProximaNova'),
+		url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Proxima Nova Bold';
+	src: url('ProximaNova-Bold.eot');
+	src: local('Proxima Nova Bold'), local('ProximaNova'),
+		url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Bold.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* =========== Resets =========== */
+/* =========== Variables =========== */
+:root{
+	--label-bg-success: #22b14c;
+	--headings: #000000;
+	--text-light: #ccd4e8;
+	--golden-star: #ff8716;
+	--btn-bg: #1db2ef;
+	--primary: #283860;
+	--text-copyright: #676f82;
+	--text-secondary: #647191;
+	--input-bg: #cdd3e1;
+}
+
+/* =========== Common =========== */
+body{ 
+	font-family: 'Proxima Nova', Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: var( --primary );
+ }
+
+/* =========== Top banner */
+.top-banner {
+	height: 100vh;
+	max-height: 100vh;
+	display: flex;
+	justify-content: flex-end;
+	background-image: url( '../img/main-img.png' );
+	background-repeat: no-repeat;
+	background-position: right top;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.container {
+	width: 1143px;
+	margin: 0 auto;
+}
+.content {
+}
+.h1 {
+}
+.p {
+}
+.more-reviews {
+}
+.bg-img { display: none; }

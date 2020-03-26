@@ -1,0 +1,737 @@
+/* =========== Fonts =========== */
+@font-face {
+	font-family: 'Proxima Nova Th';
+	src: url('ProximaNovaT-Thin.eot');
+	src: local('Proxima Nova Thin'), local('ProximaNovaT-Thin'),
+		url('../fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNovaT-Thin.woff2') format('woff2'),
+		url('../fonts/ProximaNovaT-Thin.woff') format('woff'),
+		url('../fonts/ProximaNovaT-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('ProximaNova-Regular.eot');
+	src: local('Proxima Nova'), local('ProximaNova'),
+		url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Proxima Nova Bold';
+	src: url('ProximaNova-Bold.eot');
+	src: local('Proxima Nova Bold'), local('ProximaNova'),
+		url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Bold.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Proxima Nova Extrabld";
+	src: url('ProximaNova-Extrabld.eot');
+	src: local('Proxima Nova Bold'), local('ProximaNova'),
+		url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+		url('../fonts/ProximaNova-Extrabld.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* =========== Variables =========== */
+$label-bg-success: #22b14c;
+$headings: #000000;
+$text-light: #ccd4e8;
+$golden-star: #ff8716;
+$btn-bg: #1db2ef;
+$primary: #283860;
+$text-copyright: #676f82;
+$text-secondary: #647191;
+$input-bd: #cdd3e1;
+$bdrs: 16px;
+
+/* =========== Common =========== */
+html,
+body{
+	height: 100%; 
+	font-family: 'Proxima Nova', Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: $primary;
+	font-size: 25px;
+	// background-image: url('../img/layout/landing_page.psd.png');
+ }
+
+/* =========== Utilities =========== */
+.container {
+	width: 1164px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.img-responsive {
+	max-width: 100%;
+}
+.btn {
+	display: inline-block;
+	line-height: 55px;
+	padding: 0px 56px;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+
+	border-radius: 55px;
+
+	cursor: pointer;
+}
+.btn-primary {
+	box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
+	background-color: $btn-bg;
+	background-image: linear-gradient(to top, #38c3fc 0%, $btn-bg 100%);
+}
+.btn-secondary {
+	box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
+	background-color: #ffffff;
+	color: $btn-bg;
+}
+section { padding: 40px 0px 80px 0; }
+
+.title{
+	color: #000000;
+	font-size: 35px;
+	font-family: "Proxima Nova Extrabld";
+	font-weight: 400;
+	line-height: 70px;
+
+	position: relative;
+	margin-bottom: 45px;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 40px;
+		height: 3px;
+		background-color: $btn-bg;
+	}
+}
+
+/* 
+ * Page elements
+ */
+
+/* =========== Main nav */
+.navbar {
+	max-height: 116px;
+	overflow: hidden;
+	.navbar__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		height: 116px;
+		
+	}
+	.navbar__logo {
+		flex: 0 0 25%;
+	}
+	.nav {
+		flex: 0 1 auto;
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		a {
+			font-size: 24px;
+			margin-right: 25px;
+			text-decoration: none;
+			
+			&:last-child { margin-right: 0; }
+		}
+	}
+	
+	&__burger {
+		display: none;
+		width: 53px;
+		height: 25px;
+		position: relative;
+		cursor: pointer;
+
+		span {
+			display: block;
+			width: 53px; height: 5px;
+			border-radius: 5px;
+			background-color: $btn-bg;
+
+			position: absolute;
+			top: 10px; right: 0;
+		}
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			width: 39px; height: 5px;
+			border-radius: 5px;
+			background-color: $btn-bg;
+
+			position: absolute;
+			right: 0;
+		}
+		&:after { top: 20px; }
+
+	}
+}
+@media ( max-width: 767px ) {
+
+	.navbar	.navbar__logo {
+		z-index: 2;
+		flex: 0 0 50%;
+	}
+	
+	.navbar__burger{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		z-index: 2;
+
+	}
+	.navbar__nav.nav { 
+		flex-direction: column;
+		// justify-content: flex-start;
+		background-color: #fff;
+
+		position: fixed;
+		top: 0;	left: 0;
+		width: 100%;
+		padding-top: 116px;
+
+		a {
+			margin-bottom: 20px;
+
+			&.btn {
+				line-height: 40px;
+				padding: 0 75px;
+				justify-self: flex-end;
+			}
+			&.btn-primary {
+				margin-top: 35px;
+			}
+		}
+	}
+}
+
+
+/* =========== Top banner */
+.top-banner {
+	height: 85vh;
+	max-height: 85vh;
+	padding-top: 0;
+
+	display: flex;
+	justify-content: flex-end;
+	
+	background-image: url( '../img/main-img.png' );
+	background-repeat: no-repeat;
+	background-position: right top;
+	-webkit-background-size: 46%;
+	background-size: 46%;
+	
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		height: 100%;
+		
+		.h1 {
+			width: 508px;
+			// color: $primary;
+			font-size: 50px;
+			font-weight: 700;
+			line-height: 60px;
+			margin-bottom: 26px;
+		}
+		.p {
+			width: 393px;
+			color: $text-secondary;
+			font-size: 25px;
+			font-weight: 400;
+			line-height: 35px;
+		}
+		
+		.stars {
+			text-align: center;
+		}
+		.more-reviews {
+			width: 936px;
+			color: #212529;
+			font-size: 45px;
+			font-weight: 700;
+			line-height: 70px;
+		}
+	}
+}
+.bg-img { display: none; }
+
+
+/* =========== Reviews */
+.get-reviews {
+	background-color: #fafbfc;
+
+	&__title {
+		text-align: center;
+
+		&:after {
+			left: 50%;
+			transform: translateX( -50% );
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 -12px;
+	}
+
+	&__column {
+		// flex: 1 0 auto;
+		padding: 0 12px;
+		margin-bottom: 100px;
+
+		&:last-of-type { 
+			transform: translateX( 25% ); flex: 0 0 63%; 
+
+			.get-reviews__column_title { justify-content: center; }
+		}
+		&_title {
+			display: flex;
+			color: $primary;
+			font-size: 24px;
+			line-height: 48px;
+			font-family: "Proxima Nova Bold";
+
+			margin-bottom: 45px;
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				margin-right: 16px;
+				
+				color: $btn-bg;
+				font-family: "Proxima Nova Extrabld";
+				font-size: 35px;
+				font-weight: 400;
+				line-height: 70px;
+
+				background-color: rgba( $btn-bg, 0.1 );
+
+			}
+		}
+	}
+	&__column_title {
+	}
+	&__column-body {
+	}
+}
+.pseudo-input {
+	margin-bottom: 40px;
+
+	&__label {
+		color: $text-secondary;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 48px;
+	}
+	&__input {
+		width: 480px;
+		padding: 0 25px;
+		margin-bottom: 45px;
+		border: 1px solid $input-bd;
+		border-radius: $bdrs;
+		background-color: #ffffff;
+		
+		color: $btn-bg;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 80px;
+	}
+	&__link { color: $btn-bg; text-decoration: underline; text-decoration-color: $text-light; cursor: pointer; }
+	&__area {
+
+		width: 480px;
+		padding: 0 25px;
+		margin-bottom: 15px;
+		
+		border: 1px solid $input-bd;
+		border-radius: $bdrs;
+		background-color: #ffffff;
+		
+		font-size: 20px;
+		line-height: 30px !important;
+		color: #000;
+	}
+	&__comment {
+		color: $primary;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 40px;
+
+		img { margin-right: 10px; }
+	}
+}
+
+.panel {
+	border: 1px solid $input-bd;
+	border-radius: $bdrs;
+	overflow: hidden;
+
+	.panel-heading {
+		padding: 40px;
+		box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
+		background-color: $primary;
+		background-image: linear-gradient(to top, #38c3fc 0%, $btn-bg 100%);
+
+		.rate-review {
+			display: flex;
+			justify-content: space-between;
+		}
+		.rate {
+			color: #ffffff;
+			font-size: 25px;
+			font-weight: 700;
+			line-height: 48px;
+		}
+		.google {
+			color: #ffffff;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 40px;
+		}
+		.neibour {
+			color: #ffffff;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 48px;
+		}
+	}
+	.panel-body {
+		padding: 40px;
+		padding-bottom: 0;
+		background-color: #fff;
+	}
+	.panel-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px;
+		background-color: #fff;
+
+		&__btns {}
+		&__comment {
+			font-family: "Proxima Nova";
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 32px;
+			/* Text style for "Learn More" */
+			
+			a {
+				color: $btn-bg;
+				text-decoration: underline;
+				text-decoration-color: $text-light;
+			}
+		}
+		&__google {}
+	}
+}
+.rate-review {
+}
+.rate {
+}
+.google {
+}
+.neibour {
+}
+.person {
+	display: flex;
+	align-items: center;
+	margin-bottom: 80px;
+
+	&__card {
+		flex: 1 0 auto;
+
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+
+		align-items: center;
+
+		img { margin-right: 8px; }
+	}
+	&__name {
+		color: $primary;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 32px;
+	}
+	&__rating {
+		flex: 0 0 auto;
+
+	}
+}
+.person-input {
+	color: #95aab2;
+	font-family: "Proxima Nova";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 48px;
+
+	border-bottom: 1px solid #95aab2;
+}
+.btn-set {
+	margin-bottom: 45px;
+
+	.btn { margin-right: 15px; 
+		&:last-of-type { margin-right: 0px; }
+	}
+}
+
+/* =========== Monitor All Your Reviews */
+.monitor-reviews {
+}
+.monitor-reviews__wrapper {
+	display: flex;
+	margin: 25px 0;
+
+	.monitor-reviews__title-col {
+			flex: 0 0 30%;
+
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			padding: 0 25px;
+
+		.monitor-reviews__title {
+			color: #000000;
+			font-family: "Proxima Nova Extrabld";
+			font-size: 50px;
+			font-weight: 400;
+			line-height: 60px;
+
+			position: relative;
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				width: 40px;
+				height: 3px;
+				background-color: $btn-bg;
+			}
+		}
+	}
+	.reviews {
+		flex: 1 0 70%;
+			padding: 0 25px;
+	}
+}
+.review-item {
+	border-radius: $bdrs;
+	padding: 20px 40px 25px 90px;
+	margin-bottom: 40px;
+	box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
+	background-color: #ffffff;
+
+	.review__header{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	&__author {
+		display: flex;
+		position: relative;
+	}
+		
+	&__person {
+		margin-right: 15px;
+	}
+	&__image {
+		position: absolute;
+		left: -60px;
+	}
+		
+	&__name {
+		color: #283860;
+		font-family: "Proxima Nova";
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 32px;
+	}
+	&__rating {
+	}
+	&__btn {
+	}
+
+
+	&__label span{
+		display: block;
+		margin-top: 5px;
+		padding: 0 10px;
+		background-color: #22b14c;
+
+		color: #ffffff;
+		font-family: "Proxima Nova";
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 20px;
+	}
+}
+.review {
+	&__header {
+	}
+	&__body {
+		color: #283860;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 25px;
+	}
+}
+
+/* ============ FP video swction */
+.how-it-works {
+		text-align: center;
+	&__title {
+
+		&:after {
+			left: 50%;
+			transform: translateX( -50% );
+		}
+	}
+}
+.video {
+}
+
+/* ============= Site footer */
+.footer {
+	padding-top: 130px;
+	// background-color: $primary;
+	color: #fff;
+	// background:transparent url('../img/footer_bg.jpg') left top no-repeat;
+	background:transparent url('../img/footer_bg.svg') left top no-repeat;
+	background-size: cover;
+
+
+	ul { padding: 0; margin: 0; }
+	li { list-style: none; padding: 0; margin: 0; }
+	a { color: $text-light; text-decoration: none; 
+		color: $text-light;
+		font-family: "Proxima Nova";
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 45px;
+	}
+
+	&__row {
+	}
+	&__col {
+	}
+
+	&__logo {
+	}
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+	&__col_title {
+		color: #ffffff;
+		font-family: "Proxima Nova";
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 30px;
+	}
+}
+.social-contacts {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 75px;
+
+	a {
+		padding-right: 17px;
+	}
+	a:last-child { padding-right: 0; }
+}
+.soc-icon {
+}
+.copyright {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	color: $text-copyright;
+	font-family: "Proxima Nova";
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 30px;
+	background-color: #fafbfc;
+	
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	a{ color: $text-copyright; }
+	
+	&-text { 
+		color: $text-copyright; 
+		display: flex;
+	    align-items: center;
+	}
+	.footer-logo {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+.privacy {
+	color: $text-copyright;
+	font-family: "Proxima Nova";
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 30px;
+
+	a {
+		margin-right: 20px;
+		position: relative;
+
+		&:after {
+			display: inline-block;
+			content: ' | ';
+			position: absolute;
+			font-size: 18px;
+			right: -13px;
+		}		
+	}
+	a:last-child {
+		&:after { content: ''; }
+
+	}
+}
