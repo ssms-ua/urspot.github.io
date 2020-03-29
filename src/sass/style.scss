@@ -163,6 +163,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 	}
 	&__logo {
 		flex: 0 0 25%;
+		z-index: 2;
 	}
 
 	&__burger { display: none; }
@@ -1038,7 +1039,8 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
  * Blog page
  */
 .blog-banner {
-	padding-top: 200px;
+	height: 100%;
+	padding-top: 100px;
 	color: #fff;
 	background: $primary url( '../img/blog_banner.jpg' ) center center / cover no-repeat;
 	position: relative;
@@ -1096,9 +1098,78 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 	}
 }
 .slider {
-	display: flex;
-	margin: 0 -22px;
+	position: relative;
+	min-width: 0;
+	
+	.slick-arrow {
+		visibility: hidden;
+		position: absolute;
+		top: 30%;
+		z-index: 1;
+
+		&.slick-prev,
+		&.slick-next {
+
+			&:before {
+				position: absolute; width: 60px; height: 60px;
+				top: 50%; left: 50%; transform: translate( -50% );
+
+				visibility: visible;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				color: #fff;
+				font-weight: 700;
+				box-shadow: 0 2px 20px rgba(40, 56, 96, 0.1);
+				background-color: #283860;
+
+				border-radius: 50%;
+				
+				opacity: 1;
+			}
+		}
+
+		&.slick-prev { 
+			&:before { content: '\2039'; left: -40px; font-size: 1.5em;}
+		 }
+		
+		&.slick-next { 
+			right: -70px;
+
+			&:before { content: '\203A'; font-size: 1.5em;}
+		}
+
+		.slick-disabled {
+			&:before {
+				color: $primary !important;
+				box-shadow: 0 2px 20px rgba(40, 56, 96, 0.1) !important;
+				background-color: #283860 !important;
+				opacity: 0.1 !important;
+
+			}
+		}
+	}
+
+	.slick-list {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		margin: 0;
+		padding: 0;
+
+		&:focus { outline: none; }
+
+		&.dragging {
+			cursor: pointer;
+			cursor: hand;
+		}
+		.slick-track { display: flex; }		
+	}
 }
+
+
 .thumbnail {
 	&__img { border-radius: 16px; }
 	&__body {
@@ -1412,3 +1483,8 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 
 	}
 }
+
+/* 
+ * Slick slider
+ */
+/* ============== Trending Posts Blog Slider */
