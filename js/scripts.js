@@ -24,7 +24,7 @@ function burger_menu() {
 function trending_posts_blog_slider() {
 
 	$( '.slider' ).slick({
-		// infinite: false,
+		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		/*centerMode: true,
@@ -41,15 +41,11 @@ function trending_posts_blog_slider() {
 			},
 			{
 				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-				}
+				settings: { slidesToShow: 2, }
 			},
 			{
 				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-			}
+				settings: { slidesToShow: 1, }
 		}
 	] });
 
