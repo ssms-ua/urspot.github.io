@@ -3,7 +3,10 @@ jQuery(document).ready(function($) {
 	burger_menu();
 
 	/* Blog psge */
-	trending_posts_blog_slider()
+	trending_posts_blog_slider();
+
+	/* Dos and Don'ts */
+	dad_accordion();
 
 });
 
@@ -48,5 +51,15 @@ function trending_posts_blog_slider() {
 				settings: { slidesToShow: 1, }
 		}
 	] });
+
+}
+
+function dad_accordion() {
+
+	$('.accordion__header').click(function(event) {
+		$( this ).find( '.shevron-black-down' ).toggleClass( 'active' );
+		$( this ).parent().toggleClass( 'active' );
+		$( this ).next().slideToggle(300);
+	});
 
 }

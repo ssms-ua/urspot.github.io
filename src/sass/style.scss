@@ -99,7 +99,7 @@ body{
 	cursor: pointer;
 }
 .btn-primary {
-	color: #ffffff;
+	color: #fff;
 	box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
 	background-color: $btn-bg;
 	background-image: linear-gradient(to top, #38c3fc 0%, $btn-bg 100%);
@@ -107,7 +107,7 @@ body{
 .btn-secondary {
 	color: $btn-bg !important;
 	box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
-	background-color: #ffffff;
+	background-color: #fff;
 	color: $btn-bg;
 }
 section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
@@ -406,7 +406,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 
 					color: #fff;
 				}
-				.p { color: #ffffff; width: 90%; margin: 0 auto; letter-spacing: 1px; 
+				.p { color: #fff; width: 90%; margin: 0 auto; letter-spacing: 1px; 
 					position: relative;
 					z-index: 1; 
 				}
@@ -499,7 +499,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 		margin-bottom: 45px;
 		border: 1px solid $input-bd;
 		border-radius: $bdrs;
-		background-color: #ffffff;
+		background-color: #fff;
 		
 		color: $btn-bg;
 		font-size: 24px;
@@ -516,7 +516,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 		
 		border: 1px solid $input-bd;
 		border-radius: $bdrs;
-		background-color: #ffffff;
+		background-color: #fff;
 		
 		font-size: 20px;
 		line-height: 30px !important;
@@ -609,19 +609,19 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 			justify-content: space-between;
 		}
 		.rate {
-			color: #ffffff;
+			color: #fff;
 			font-size: 25px;
 			font-weight: 700;
 			line-height: 48px;
 		}
 		.google {
-			color: #ffffff;
+			color: #fff;
 			font-size: 13px;
 			font-weight: 700;
 			line-height: 40px;
 		}
 		.neibour {
-			color: #ffffff;
+			color: #fff;
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 48px;
@@ -663,7 +663,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 .google {
 }
 .neighbor {
-	color: #ffffff;
+	color: #fff;
 	font-size: 18px;
 	line-height: 48px;
 }
@@ -761,7 +761,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 	padding: 20px 40px 25px 90px;
 	margin-bottom: 40px;
 	box-shadow: 0 2px 30px rgba(29, 178, 239, 0.15);
-	background-color: #ffffff;
+	background-color: #fff;
 
 	.review__header{
 		display: flex;
@@ -801,7 +801,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 		padding: 0 10px;
 		background-color: #22b14c;
 
-		color: #ffffff;
+		color: #fff;
 		font-family: "Proxima Nova";
 		font-size: 13px;
 		font-weight: 700;
@@ -917,7 +917,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 		margin-bottom: 50px;
 	}
 	&__col_title {
-		color: #ffffff;
+		color: #fff;
 		font-family: "Proxima Nova";
 		font-size: 20px;
 		font-weight: 700;
@@ -1380,7 +1380,7 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 				content: '';
 				position: absolute; top: 50%; left: -46px;
 				width: 30px; height: 2px;
-				background-color: #ffffff;
+				background-color: #fff;
 			}
 		}
 	}
@@ -1567,5 +1567,145 @@ section { padding: 40px 0px 80px 0; width: 100%; box-sizing: border-box; }
 		font-size: 13px;
 		font-weight: 400;
 		line-height: 26px;
+	}
+}
+
+/* 
+ * dos-and-donts
+ */
+.dad-video {
+	padding-top: 200px;
+	&__frame {
+		margin-bottom: 50px;
+		border: 1px solid $input-bd;
+		border-radius: 16px;
+	}
+	&__img {
+	}
+	&__descr {
+		padding: 30px 45px;
+	}
+	&__header {
+		color: $primary;
+	}
+	&__content {
+	}
+	&__subtitle {
+		color: #000000;
+		font-family: "Proxima Nova Bold";
+		font-size: 25px;
+		line-height: 32px;
+
+		margin-bottom: 22px;
+	}
+	&__text {
+		color: #4e5464;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+
+		margin-bottom: 35px;
+	}
+	&__footer {
+		display: flex;
+	}
+}
+.block-footer {
+	&__image {
+		margin-right: 10px;
+	}
+	&__meta {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__name {
+		color: $primary;
+		font-family: "Proxima Nova Bold";
+		font-size: 16px;
+		line-height: 28px;
+	}
+	&__date {
+		color: $primary;
+		font-size: 13px;
+		line-height: 28px;
+	}
+}
+
+/* ================= Accordion */
+.dad-recomendations {
+	&__body {
+	}
+	&__title {
+	}
+	&__content {
+	}
+	&__item {
+	}
+}
+.accordion {
+	margin-bottom: 30px;
+	border-radius: 16px;
+	box-shadow: 0 2px 20px rgba(29, 178, 239, 0.1);
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 5px 50px;
+		
+		border-radius: 16px;
+		box-shadow: 0 2px 20px rgba(29, 178, 239, 0.1);
+		background-color: #fff;
+
+		color: #000;
+		font-size: 20px;
+		line-height: 70px;
+		
+	}
+	&__body {
+		display: none;
+		padding: 30px 50px;
+
+		color: #283860;
+		font-size: 20px;
+		line-height: 35px;
+	}
+	
+	&.active {
+		.accordion__header {
+			color: #fff;
+			background-color: $btn-bg;
+			transition: background-color 0.3s;
+		}
+	}
+
+}
+
+.shevron-black-down{
+	display: flex;
+	position: relative;
+	width: 60px; height: 60px;
+	cursor: pointer;
+
+	&:before,
+	&:after {
+		content: '';
+		display: flex;
+		width: 15px; height: 2px;
+		background-color: #000;
+		transition: all 0.3s ease-out;
+
+		position: absolute;
+
+	}
+	&:before { transform: rotate( 45deg ); top: 50%; left: 31%; }
+	&:after { transform: rotate( -45deg ); top: 50%; left: 45%; }
+
+	&.active {
+		&:before, &:after { background-color: #fff; }
+		&:before { transform: rotate( -45deg ); top: 50%; left: 31%; }
+		&:after { transform: rotate( 45deg ); top: 50%; left: 45%; }
 	}
 }
